@@ -23,7 +23,9 @@ class Replacer {
     
     /**
      * 
-     * @return ReplacerResults
+     * @param boolean $verbose
+     * @return \ReplacerResults
+     * @throws RuntimeException
      */
     public function replace($verbose = true) {
         
