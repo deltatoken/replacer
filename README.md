@@ -1,5 +1,6 @@
-# differ
-Replacer tool
+# replacer
+Replacer tool:
+Replace each occurens by regexes in all files of a specific folder
 
 ### Install:
 
@@ -10,7 +11,7 @@ $ cd replacer
 
 ### Config: 
 
-Follow the instruction in `config.php` or `config.example.php` to set test and control folders etc..
+Follow the instruction in `config.php` or `config.example.php` to set regexes and folder etc..
 
 ### Run replacer:
 
