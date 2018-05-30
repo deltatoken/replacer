@@ -6,7 +6,6 @@ ini_set('memory_limit', '-1');
 include_once __DIR__ . '/Replacer.php';
 include_once __DIR__ . '/ReplacerConfig.php';
 include_once __DIR__ . '/ReplacerResults.php';
-include_once __DIR__ . '/RecursiveDirectoryIteration.php'; // TODO: needs to add packagist
 
 
 // ---------------- START ENTRY HERE -------------------
