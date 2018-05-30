@@ -1,0 +1,10 @@
+{
+    "name": "gymad/replacer",
+    "authors": [
+        {
+            "name": "Gyula Madarasz",
+            "email": "gyula.madarasz@salesagility.com"
+        }
+    ],
+    "require": {}
+}
