@@ -1,6 +1,6 @@
 <?php
 
-use gymad\rditerator\RecursiveDirectoryIteration;
+use \gymad\rditerator\RecursiveDirectoryIteration;
 
 /**
  * Description of Replacer
