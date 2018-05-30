@@ -7,6 +7,8 @@ $regexes = [
     '/\$state\-\>popTable\(\'aod_index\'\);/' => '',
     '/\$state\-\>pushTable\(\'aod_indexevent\'\);/' => '',
     '/\$state\-\>popTable\(\'aod_indexevent\'\);/' => '',
+    '/\$state\-\>pushTable\(\'leads_cstm\'\);/' => '',
+    '/\$state\-\>popTable\(\'leads_cstm\'\);/' => '',
 ];
 
 $excludedPaths = array(
