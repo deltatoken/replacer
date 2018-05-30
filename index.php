@@ -13,7 +13,7 @@ include_once __DIR__ . '/RecursiveDirectoryIteration.php'; // TODO: needs to add
 
 include __DIR__ . '/config.example.php';
 
-$config = new ReplacerConfig($regexes, $path);
+$config = new ReplacerConfig($regexes, $path, $excludedExtensions);
 
 $replacer = new Replacer($config);
 $results = $replacer->replace();

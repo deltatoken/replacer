@@ -9,6 +9,8 @@ $regexes = [
     '/\$state\-\>popTable\(\'aod_indexevent\'\);/' => '',
     '/\$state\-\>pushTable\(\'leads_cstm\'\);/' => '',
     '/\$state\-\>popTable\(\'leads_cstm\'\);/' => '',
+    '/\$state\-\>pushTable\(\'meetings_cstm\'\);/' => '',
+    '/\$state\-\>popTable\(\'meetings_cstm\'\);/' => '',
 ];
 
 $excludedPaths = array(
@@ -25,3 +27,5 @@ $excludedPaths = array(
 
 $excludedFiles = array(
 );
+
+$excludedExtensions = ['yml', '', 'sql', 'png', 'md'];

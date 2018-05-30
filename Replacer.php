@@ -35,6 +35,19 @@ class Replacer {
         $dirIterator = new RecursiveDirectoryIteration();
         $files = $dirIterator->readFiles($this->config->getPath(), true, $this->config->getExcludedPaths(), $this->config->getExcludedPaths());
         foreach ($files as $file) {
+            
+            if (in_array($file['filename'], $this->config->getExcludedFiles())) {
+                break;
+            }
+            
+            if (in_array($file['relativePath'], $this->config->getExcludedPaths())) {
+                break;
+            }
+            
+            if (in_array($file['extension'], $this->config->getExcludedExtensions())) {
+                break;
+            }
+            
             if ($verbose) {
                 echo "Replacing in file: {$file['relativePath']} ... ";
             }

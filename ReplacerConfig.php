@@ -15,11 +15,14 @@ class ReplacerConfig {
     
     private $excludedFiles;
     
-    public function __construct($regexes, $path, $excludedPaths = [], $excludedFiles = []) {
+    private $excludedExtensions;
+    
+    public function __construct($regexes, $path, $excludedExtensions = [], $excludedPaths = [], $excludedFiles = []) {
         $this->regexes = $regexes;
         $this->path = $path;
         $this->excludedPaths = $excludedPaths;
         $this->excludedFiles = $excludedFiles;
+        $this->excludedExtensions = $excludedExtensions;
     }
     
     public function getRegexes() {
@@ -36,6 +39,10 @@ class ReplacerConfig {
     
     public function getExcludedFiles() {
         return $this->excludedFiles;
+    }
+    
+    public function getExcludedExtensions() {
+        return $this->excludedExtensions;
     }
     
 }
