@@ -6,5 +6,7 @@
             "email": "gyula.madarasz@salesagility.com"
         }
     ],
-    "require": {}
+    "require": {
+        "gymad/rditerator": "^0.0.1"
+    }
 }
