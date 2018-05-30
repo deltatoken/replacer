@@ -11,6 +11,8 @@ $regexes = [
     '/\$state\-\>popTable\(\'leads_cstm\'\);/' => '',
     '/\$state\-\>pushTable\(\'meetings_cstm\'\);/' => '',
     '/\$state\-\>popTable\(\'meetings_cstm\'\);/' => '',
+    '/\$state\-\>pushTable\(\'opportunities_cstm\'\);/' => '',
+    '/\$state\-\>popTable\(\'opportunities_cstm\'\);/' => '',
 ];
 
 $excludedPaths = array(
