@@ -1,5 +1,6 @@
 # replacer
-Replacer tool
+Replacer tool:
+Replace each occurens by regexes in all files of a specific folder
 
 ### Install:
 
