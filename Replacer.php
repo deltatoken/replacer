@@ -38,18 +38,42 @@ class Replacer {
         }
         $dirIterator = new RecursiveDirectoryIteration();
         $files = $dirIterator->readFiles($this->config->getPath(), true, $this->config->getExcludedPaths(), $this->config->getExcludedPaths());
+        
         foreach ($files as $file) {
             
             if (in_array($file['filename'], $this->config->getExcludedFiles())) {
-                break;
+                continue;
             }
             
             if (in_array($file['relativePath'], $this->config->getExcludedPaths())) {
-                break;
+                continue;
+            }
+            
+            
+            if ($exludedRegexes = $this->config->getExcludedRegexes()) {
+                $exclude = false;
+                foreach ($exludedRegexes as $exludedRegex) {
+                    if (
+                        preg_match($exludedRegex, $file['relativePath']) || 
+                        preg_match($exludedRegex, $file['realPath']) || 
+                        preg_match($exludedRegex, $file['filename']) ) {
+                        $exclude = true;
+                        break;
+                    }
+                  
+                }
+                if ($exclude) {
+                    continue;
+                }
             }
             
             if (in_array($file['extension'], $this->config->getExcludedExtensions())) {
-                break;
+                continue;
+            }
+            
+            $includedExtensions = $this->config->getIncludedExtensions();
+            if (!empty($includedExtensions) && !in_array($file['extension'], $includedExtensions)) {
+                continue;
             }
             
             if ($verbose) {

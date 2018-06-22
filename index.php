@@ -14,7 +14,7 @@ include_once __DIR__ . '/ReplacerResults.php';
 
 include __DIR__ . '/config.example.php';
 
-$config = new ReplacerConfig($regexes, $path, $excludedExtensions);
+$config = new ReplacerConfig($regexes, $path, $excludedExtensions, $excludedPaths, $excludedFiles, $excludedRegexes, $includedExtensions);
 
 $replacer = new Replacer($config);
 $results = $replacer->replace();

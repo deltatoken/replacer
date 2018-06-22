@@ -1,33 +1,18 @@
 <?php
 
-$path = '/var/www/html/SuiteAssured/tests';
+$path = '/var/www/html/SuiteAssured';
 
 $regexes = [
-    '/\$state\-\>pushTable\(\'aod_index\'\);/' => '',
-    '/\$state\-\>popTable\(\'aod_index\'\);/' => '',
-    '/\$state\-\>pushTable\(\'aod_indexevent\'\);/' => '',
-    '/\$state\-\>popTable\(\'aod_indexevent\'\);/' => '',
-    '/\$state\-\>pushTable\(\'leads_cstm\'\);/' => '',
-    '/\$state\-\>popTable\(\'leads_cstm\'\);/' => '',
-    '/\$state\-\>pushTable\(\'meetings_cstm\'\);/' => '',
-    '/\$state\-\>popTable\(\'meetings_cstm\'\);/' => '',
-    '/\$state\-\>pushTable\(\'opportunities_cstm\'\);/' => '',
-    '/\$state\-\>popTable\(\'opportunities_cstm\'\);/' => '',
+    '/\#534[Dd]64/' => '#196579',
+    '/\#5[Dd]5670/' => '#48808F',
 ];
 
-$excludedPaths = array(
-    '_data/',
-    '_envs/',
-    '_output/',
-    '_support/',
-    'acceptance/',
-    'api/',
-    'demo/',
-    'functional/',
-    'install/',
-);
+$excludedPaths = [];
 
-$excludedFiles = array(
-);
+$excludedFiles = [];
 
-$excludedExtensions = ['yml', '', 'sql', 'png', 'md'];
+$excludedRegexes = ['/^\.git/'];
+
+$excludedExtensions = [''];
+
+$includedExtensions = ['css', 'scss', 'svg', 'tpl', 'html'];
