@@ -14,7 +14,7 @@ include_once __DIR__ . '/ReplacerResults.php';
 
 //include __DIR__ . '/config_noon_theme.php';
 //include __DIR__ . '/config_sa_header_color.php';
-incelude __DIR__ . '/config_7.11-beta.php';
+include __DIR__ . '/config_7.11-beta.php';
 
 $config = new ReplacerConfig($regexes, $path, $excludedExtensions, $excludedPaths, $excludedFiles, $excludedRegexes, $includedExtensions);
 
